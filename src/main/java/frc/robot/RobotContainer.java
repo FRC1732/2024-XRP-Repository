@@ -64,13 +64,13 @@ public class RobotContainer {
 
     JoystickButton joystickAButton = new JoystickButton(m_controller, 1);
     joystickAButton
-        .onTrue(new InstantCommand(() -> m_arm.setAngle(45.0), m_arm))
-        .onFalse(new InstantCommand(() -> m_arm.setAngle(0.0), m_arm));
+        .onTrue(new InstantCommand(() -> m_arm.setAngle(50.0), m_arm))    
+        .onFalse(new InstantCommand(() -> m_arm.setAngle(90.0), m_arm));
 
     JoystickButton joystickBButton = new JoystickButton(m_controller, 2);
     joystickBButton
         .onTrue(new InstantCommand(() -> m_arm.setAngle(90.0), m_arm))
-        .onFalse(new InstantCommand(() -> m_arm.setAngle(0.0), m_arm));
+        .onFalse(new InstantCommand(() -> m_arm.setAngle(180.0), m_arm));
 
     // Setup SmartDashboard options
     m_chooser.setDefaultOption("Auto Routine Distance", new AutonomousDistance(m_drivetrain));
